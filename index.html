@@ -1,9 +1,90 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Minimal by Steve Smith</title>
+    <title>Max Eckard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          background-color: red;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 4px;
+        }
+
+        #myBtn:hover {
+          background-color: #555;
+        }
+        
+        #more {display: none;}
+        
+        #otherMore {display: none;}
+
+    </style>
+
+    <script>  
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+    
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myOtherBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more...";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less...";
+        moreText.style.display = "inline";
+      }
+    }
+    
+    function myOtherFunction() {
+      var dots = document.getElementById("otherDots");
+      var moreText = document.getElementById("otherMore");
+      var btnText = document.getElementById("myOtherOtherBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more...";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less...";
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -11,197 +92,203 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up"></i><br />Top</button>
+
     <div class="wrapper">
-      <header>
-        <h1>Minimal</h1>
-        <p>A Theme for GitHub Pages</p>
+        <header>
+            <h1>Max Eckard</h1>
+
+            <img src="./assets/MPHOTO_StaffHds7Nov25_027.JPG" alt="Logo" style="border:solid black"/><br />
+            
+
+            <p><small>Photo credit: Leisa Thompson</small></p>
+            <p>Associate Director for Curation at the Bentley Historical Library</p>
+            <!--
         <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
         <ul>
-          <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="http://github.com/orderedlist/minimal">Fork On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/orderedlist/minimal/zipball/master">Download <b>ZIP File</b></a></li>
+          <li><a href="https://github.com/orderedlist/minimal/tarball/master">Download <b>TAR Ball</b></a></li>
+          <li><a href="http://github.com/orderedlist/minimal">Fork On <b>GitHub</b></a></li>
         </ul>
-      </header>
-      <section>
-        <h1>GitHub Flavored Markdown</h1>
+        -->
+        </header>
+        <section>
 
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
+            <p>I'm <b>Max Eckard</b>, Associate Director for Curation at the University of Michigan <a href="https://bentley.umich.edu/" target="_blank">Bentley Historical Library</a> <i class="fa fa-external-link"></i>.</p>
 
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
+            <h2 id="table-of-contents">Table of Contents</h2>
 
-        <p>Roses are red<br>
-        Violets are blue</p>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a>
+                    <ul>
+                        <li><a href="#talks">Essays (Blog Posts) and Talks</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#articles">Peer-Reviewed Articles</a></li>
+                        <!--
+                        <li><a href="#courses">Society of American Archivists (SAA) Digital Archives Specialist (DAS) Courses</a></li>
+                    -->
+                        <li><a href="#programs">Computer Programs</a></li>
+                        <li><a href="#cv">Curriculum Vitae (CV)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ul>
 
-        <p>The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:</p>
+            <h2 id="about">About
+                <a name="about"></a>
+            </h2>
 
-        <p>Roses are red<br><br>
-        Violets are blue</p>
+            <p>As head of the Bentley's Curation Team represent the team on the Bentley's Administrative Committee, and lead the Bentley's holistic approach to curating archives of all genres and formats.</p>
 
-        <p>Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.</p>
+            <p>Provides leadership and supervision for those who oversee the processing and collections management programs (including conservation), digitization program, born-digital curation activities, web and social media archives, and associated infrastructure at the Bentley. In this role, provides strategic vision for the development, maintenance, and integration of our technical ecosystem, which includes Aeon, ArchivesSpace, Archivematica, Archive-It, DSpace, Kaltura, Fishrappr, and other platforms. Works closely with the Curation Team to support cultural competency efforts within the team and individuals, the creation and reuse of metadata, and the introduction of more efficient workflows through technical innovation. To achieve these goals, serves as the Bentley's primary liaison to the U-M Library’s Library Information Technology (LIT) group, to establish clear and consistent communications and advance the creation and enhancement of digital collections. Is the Bentley’s primary onsite coordinator at the Bentley’s North Campus Research Complex location.</p>
+            
+            <h2 id="portfolio">Portfolio
+                <a name="portfolio"></a>
+            </h2>
 
-        <h2>A bit of the GitHub spice</h2>
+            <h3 id="talks">Essays (Blog Posts) and Talks
+                <a name="talks"></a>
+            </h3>
 
-        <p>In addition to the changes in the previous section, certain references are auto-linked:</p>
+            <p>Link to <a href="/essays-and-talks" target="_blank">Essays (Blog Posts) and Talks</a> <i class="fa fa-external-link"></i>.</p>
+            
+            <h3 id="books">Books
+                <a name="books"></a>
+            </h3>
+            
+            <p>
+                <a href="https://mysaa.archivists.org/productdetails?id=a1B5a00000heMFvEAM" target="_blank"><img src="./assets/MYTWfY-RESIZED.png" alt="Making Your Tools Work for You" style="border:solid black"></a>
+            </p>
 
-        <ul>
-          <li>SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2</li>
-          <li>User@SHA ref: <a href="https://github.com/mojombo/product/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo@<tt>be6a8cc</tt></a></li>
-          <li>User/Project@SHA: <a href="https://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo/god@<tt>be6a8cc</tt></a></li>
-          <li>#Num: <a href="https://github.com/github/product/issues/1" class="issue-link" title="Baseline: What is up in the air right now?">#1</a></li>
-          <li>User/#Num: mojombo#1</li>
-          <li>User/Project#Num: <a href="https://github.com/mojombo/god/issues/1" class="issue-link" title="The server is not available (or you do not have permissions to access it)">mojombo/god#1</a></li>
-        </ul>
+            <p><b><i><a href="https://mysaa.archivists.org/productdetails?id=a1B5a00000heMFvEAM" target="_blank">Making Your Tools Work for You: Building and Maintaining an Integrated Technical Ecosystem for Archives and Digital Libraries</a></i> <i class="fa fa-external-link"></i></b></p>
 
-        <p>These are dangerous goodies though, and we need to make sure email addresses don't get mangled:</p>
+<p><em>Take a peak inside <a href="http://files.archivists.org/store/SAA-MakingYourToolsWorkForYou-Preview.pdf">Making Your Tools Work for You <i class="fa fa-external-link"></i></a>!</em></p>
 
-        <p>My email addy is <a href="mailto:tom@github.com">tom@github.com</a>.</p>
+<p>Archivists make use of many different tools and systems in their day-to-day work, all of which cover a wide range of functions in the big, bold (and, of course, sometimes difficult!) archival enterprise: research request and workflow management, archival information management, digital preservation, web archiving,
+digital repositories, and more. These tools necessarily specialize in one function or another, but none of them do it all, and managing so many resources can become overwhelming. The good news--at least when it comes to technology--is that<span id="dots">...</span><span id="more"> many systems are designed to connect with one another, and systems integration can support a variety of archival needs, creating efficient workflows from accession to ingest to access. Weaving together both theory and reflective practice, <i>Making Your Tools Work for You</i> gives an overview of the what, why, and how of systems integration for archives and digital libraries. Using examples from his work at the Bentley Historical Library as well as others' work in the field, Max Eckard outlines: how to design an integrated technical ecosystem; how to select systems capable of "playing nicely" with others; various integration methodologies to get systems talking to one another; tips for starting a systems integration project; and ways to clean, reconcile, program, and ultimately support data and metadata on the move. Whether designing integration from the ground up or taking steps to improve upon current systems, <i>Making Your Tools Work for You</i> is a comprehensive manual that will help readers adapt and apply these ideas to set up archives and digital libraries for success.</span></p>
 
-        <h2>Math is hard, let's go shopping</h2>
+<button onclick="myFunction()" id="myOtherBtn">Read more...</button>
 
-        <p>In first grade I learned that 5 &gt; 3 and 2 &lt; 7. Maybe some arrows. 1 -&gt; 2 -&gt; 3. 9 &lt;- 8 &lt;- 7.</p>
+<p></p>
 
-        <p>Triangles man! a^2 + b^2 = c^2</p>
+<p>And it's been reviewed...</p>
 
-        <h2>We all like making lists</h2>
+<ul>
+	<li>Memory, Lindsey. "<a href="https://digitalcommons.usu.edu/westernarchives/vol13/iss1/14/" target="_blank">Review of Making Your Tools Work for You: Building and Review of Making Your Tools Work for You: Building and Maintaining an Integrated Technical Ecosystem for Digital Archives and Libraries</a> <i class="fa fa-external-link"></i>," <i>Journal of Western Archives</i> 13, no. 1 (2022)</li>
+	<li>Leimkuehler, Ryan. "<a href="https://elischolar.library.yale.edu/jcas/vol10/iss1/4/" target="_blank">Review of Making Your Tools Work for You: Building and Review of Making Your Tools Work for You: Building and Maintaining an Integrated Technical Ecosystem for Digital Archives and Libraries</a> <i class="fa fa-external-link"></i>," <i>Journal of Contemporary Archival Studies</i> 10 (2023)</li>
+	<li>Howard, Rachel I. "<a href="https://www.iastatedigitalpress.com/archivalissues/article/id/16298/" target="_blank">Making Your Tools Work for You: Building and Maintaining an Integrated Technical Ecosystem for Digital Archives and Libraries. By Max Eckard. [Review]</a> <i class="fa fa-external-link"></i>," <i>Archival Issues</i> 42, no. 1 (2023)</li>
+</ul>
 
-        <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
+            <h3 id="peer-reviewed-articles">Peer-Reviewed Articles
+                <a name="articles"></a>
+            </h3>
 
-        <ul>
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
+            <ul>
+                <li><b>Eckard, Max</b>, Elizabeth Gadelha, and Mike Shallcross. "<b><a href="https://meridian.allenpress.com/american-archivist/article/85/2/402/489612/Level-Up-Lessons-Learned-from-Six-Years-of" target="_blank">Level Up! Lessons Learned from Six Years of Collaborative Technical Skills Development</a> <i class="fa fa-external-link"></i></b>," <i>American Archivist</i> 85, no. 2 (2022): 402-442.</li>
+				<li><b>Eckard, Max</b> and Dallas Pillen. "<b><a href="https://link.springer.com/article/10.1007/s10502-022-09395-2" target="_blank">The Impact of the Shift to Cloud Computing on Digital Recordkeeping Practices at the University of Michigan Bentley Historical Library</a> <i class="fa fa-external-link"></i></b>," <i>Archival Science</i> (2022).</li>
+				<li><b>Eckard, Max</b> and Dallas Pillen. "<b><a href="https://deepblue.lib.umich.edu/handle/2027.42/139043" target="_blank">Streamlining Digital Archival Workflows at the Bentley Historical Library</a> <i class="fa fa-external-link"></i></b>," <i>Journal of Digital Media Management</i> 6, no. 1 (2017): 65-77.</li>
+                <li>Beaubien, Sarah and <b>Max Eckard</b>. "<b><a href="http://dx.doi.org/10.7710/2162-3309.1133" target="_blank">Addressing Faculty Publishing Concerns with Open Access Journal Quality Indicators</a> <i class="fa fa-external-link"></i></b>," <i>Journal of Librarianship and Scholarly Communication</i> 2, no. 2 (2014).</li>
+                <li><b>Eckard, Max</b>, Ashley Rosener, and Lindy Scripps-Hoekstra. "<b><a href="http://dx.doi.org/10.1016/j.acalib.2014.02.001" target="_blank">Factors that Increase the Probability of a Successful Academic Library Job Search</a> <i class="fa fa-external-link"></i></b>," <i>The Journal of Academic Librarianship</i> 40, no. 2 (2014): 1047-115.</li>
+            </ul>
 
-        <p>Let's get crazy:</p>
+            <h3 id="digital-archives-specialist-das-courses"> [Past] Society of American Archivists (SAA) Digital Archives Specialist (DAS) Courses
+                <a name="courses"></a>
+            </h3>
 
-        <ol>
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor<br>
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
-            mi posuere lectus.</p>
+            <p>
+                <a href="https://www2.archivists.org/prof-education/course-catalog/tool-integration-from-pre-sip-to-dip" target="_blank"><img src="./assets/ToolIntegration-85x64.png" alt="Tool Integration" style="border:solid black"></a>
+            </p>
 
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
+            <p><b><a href="https://www2.archivists.org/prof-education/course-catalog/tool-integration-from-pre-sip-to-dip" target="_blank">Tool Integration: From Pre-Submission Information Package (SIP) to Dissemination Information Package (DIP)</a> <i class="fa fa-external-link"></i></b></p>
 
-        <p>What about some code <strong>in</strong> a list? That's insane, right?</p>
+<p>The digital curation "ecosystem" is made up of any number of tools and systems that perform small, discrete tasks, cover particular format groups or functional areas of models like the Open Archival Information System (OAIS) Reference Model, and that even claim, at least, to be more or less comprehensive. This ecosystem is in a constant state of flux, and digital archivists are responsible for stewarding more and more--and more complex--digital content. Despite our wish for a "silver bullet," all of these tools necessarily specialize in one function or another, and none of them do it all. Managing such a high number of what are effectively silos of information and resources, especially the handoffs of data and metadata <i>between</i> them to support archival workflows, can be overwhelming. The good news, at least when it comes to technology, is that<span id="otherDots">...</span><span id="otherMore"> many systems these days are designed to connect with one another, and systems integration can "knit" disparate systems together to support a wide variety of archival needs, creating efficient workflows from accession to ingest to access. In this course, you can expect an overview of the what, why, and how of systems integration and its role in "knitting" disparate systems together to support a wide variety of workflows in the archival enterprise. If you're starting from scratch, it will help you design your integrated technical ecosystem and choose tools and systems to comprise it that "play nicely" with others. This will include deeper dives into technologies like common metadata standards and application programming interfaces (APIs), as well as data interoperability protocols and other methodologies that get systems to "talk" to one another, as well as numerous real-world examples of systems integration "in the wild" to inspire you. If you're starting from an existing workflow that makes use of siloed systems, this course will help you make better use of the affordances of technology to get those systems to work together, better. The last module will be devoted to exploring issues at the intersection of archives and technology.</span></p>
 
-        <ol>
-          <li>
-            <p>In Ruby you can map like this:</p>
+<button onclick="myOtherFunction()" id="myOtherOtherBtn">Read more...</button>
 
-            <pre><code>['a', 'b'].map { |x| x.uppercase }</code></pre>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
+<p></p>
 
-            <pre><code>['a', 'b'].map(&amp;:uppercase)</code></pre>
-          </li>
-        </ol>
+            <!--<p>What people are saying...</p>
 
-        <p>Some people seem to like definition lists</p>
+            <blockquote>
+                <p>Max was very knowledgeable and personable. He made content that is very technical much more accessible.</p>
+            </blockquote>
 
-        <dl>
-          <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
+            <blockquote>
+                <p>Very generous, positive, enthusiastic. He is a great guide.</p>
+            </blockquote>
 
-        <h2>I am a robot</h2>
+            <blockquote>
+                <p>He's an excellent explainer of technical topics both verbally and in writing. He seems like a really nice guy, too.</p>
+            </blockquote>
+        -->
 
-        <p>Maybe you want to print <code>robot</code> to the console 1000 times. Why not?</p>
+            <h3 id="computer-programs">Computer Programs
+                <a name="programs"></a>
+            </h3>
 
-        <pre><code>def robot_invasion
-  puts("robot " * 1000)
-end
-</code></pre>
+            <ul>
+                <li><code class="highlighter-rouge"><b><a href="https://github.com/bentley-historical-library/encoding-reparative-description" target="_blank">Encoding Reparative Description</a></b></code> <i class="fa fa-external-link"></i> (with Ella Li, Gideon Goodrich, and Jesse Johnston): This repository contains code related to the "Encoding Reparative Description" project, which began in 2023 with a team of researchers at the University of Michigan School of Information, the Bentley Historical Library, and the University of Michigan's Humanities Collaboratory.</li>
+                <li><code class="highlighter-rouge"><b><a href="https://github.com/bentley-historical-library/DAPPr" target="_blank">DAPPr</a></b></code> <i class="fa fa-external-link"></i>: DSpace API Python Programming resource (DAPPr) is a Python client to communicate with a remote DSpace installation using its backend Application Programming Interface (API).</li>
+                <li><code class="highlighter-rouge"><b><a href="https://github.com/bentley-historical-library/baroque" target="_blank">BAroQUe</a></b></code> <i class="fa fa-external-link"></i> (with Dallas Pillen, Hyeeyoung Kim, Liz Gadelha, Maryse Lundering-Timpano, Matt Adair, Melissa Hernández-Durán and Tim Baron): The Bentley Audiovisual Quality control Utility (BAroQUe) is a Python 3-based Command Line Interface (CLI) executable primarily intended for in-house use. It performs Quality Control (QC)--with microservices to validate directory and file naming structure, METS XML and WAV BEXT chunks--for audio digitized by vendors according to Bentley specifications.</li>
+                <li><code class=highlighter-rouge"><b><a href="https://github.com/bentley-historical-library/avatar" target="_blank">AVATAR</a></b></code> <i class="fa fa-external-link"></i>: The Bentley A/V dAtabase To ARchivesspace (AVATAR) creates or updates ArchivesSpace collection-level and archival as well as digital object elements using data output from the A/V Database.</li>
+            </ul>
 
-        <p>You see, that was formatted as code because it's been indented by four spaces.</p>
+            <h3 id="curriculum-vitae-cv">Curriculum Vitae (CV)
+                <a name="cv"></a>
+            </h3>
 
-        <p>How about we throw some angle braces and ampersands in there?</p>
+            <p>Link to <a href="https://docs.google.com/document/d/1pVKvTkYgAK8hJ1HKtIuRDrgjKEfac7BxPtAhFzrJ9bs/edit?usp=sharing" target="_blank">Curriculum Vitae (CV)</a> <i class="fa fa-external-link"></i>.</p>
 
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
+            <h2 id="contact-information">Contact Information
+                <a name="contact"></a>
+            </h2>
 
-        <h2>Set in stone</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Contact Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                        <td>eckardm <i>at</i> umich <i>dot</i> edu</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                        <td>(734) 763-7518</td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-github" aria-hidden="true"></i></td>
+                        <td><a href="https://github.com/eckardm/" target="_blank">eckardm</a> <i class="fa fa-external-link"></i></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i></td>
+                        <td><a href="https://www.linkedin.com/in/max-eckard-81009b45/">max-eckard-81009b45</a> <i class="fa fa-external-link"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <hr>
+            
+            <p>P.S. I am also really into karate. And a few times I have given 
+                <a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-ruth-2-1-to-3-5/" target="_blank">s</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-john-20-19-to-31/" target="_blank">e</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-john-4-1-to-30/" target="_blank">r</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-genesis-29-9-to-32/" target="_blank">m</a><a href="https://www.maxeckard.name/essays-and-talks/talks/mini-sermon-on-isaiah-11-1-to-10/" target="_blank">o</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-malachi-3-1-to-4/" target="_blank">n</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-mark-10-35-to-45/" target="_blank">s</a><a href="https://www.maxeckard.name/essays-and-talks/talks/mini-sermon-on-mark-16-1-to-8/" target="_blanks">.</a><a href="https://www.maxeckard.name/essays-and-talks/talks/sermon-on-judges-12-5-to-6/" target="_blank">..</a> And once I did a <a href="https://www.maxeckard.name/essays-and-talks/talks/he-causes-divorces/" target="_blank">Moth StorySLAM</a>.</p>
 
-        <p>Preformatted blocks are useful for ASCII art:</p>
-
-        <pre>             ,-.
-    ,     ,-.   ,-.
-   / \   (   )-(   )
-   \ |  ,.&gt;-(   )-&lt;
-    \|,' (   )-(   )
-     Y ___`-'   `-'
-     |/__/   `-'
-     |
-     |
-     |    -hrr-
-  ___|_____________
-</pre>
-
-        <h2>Playing the blame game</h2>
-
-        <p>If you need to blame someone, the best way to do so is by quoting them:</p>
-
-        <blockquote>
-        <p>I, at any rate, am convinced that He does not throw dice.</p>
-        </blockquote>
-
-        <p>Or perhaps someone a little less eloquent:</p>
-
-        <blockquote>
-        <p>I wish you'd have given me this written question ahead of time so I<br>
-        could plan for it... I'm sure something will pop into my head here in<br>
-        the midst of this press conference, with all the pressure of trying to<br>
-        come up with answer, but it hadn't yet...</p>
-
-        <p>I don't want to sound like<br>
-        I have made no mistakes. I'm confident I have. I just haven't - you<br>
-        just put me under the spot here, and maybe I'm not as quick on my feet<br>
-        as I should be in coming up with one.</p>
-        </blockquote>
-
-        <h2>Table for two</h2>
-
-        <table>
-          <tbody>
-        <tr>
-            <th>ID</th>
-        <th>Name</th>
-        <th>Rank</th>
-          </tr>
-          <tr>
-            <td>1</td>
-        <td>Tom Preston-Werner</td>
-        <td>Awesome</td>
-          </tr>
-          <tr>
-            <td>2</td>
-        <td>Albert Einstein</td>
-        <td>Nearly as awesome</td>
-          </tr>
-        </tbody>
-        </table>
-
-        <h2>Crazy linking action</h2>
-
-        <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from<br>
-        <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-      </section>
-      <footer>
+        </section>
+        <footer>
+            <!--
         <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        -->
+            <p><small>Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
+        </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-  </body>
+</body>
+
 </html>
